@@ -2,6 +2,8 @@
 
 MMM-CryptoPortfolio est un module pour MagicMirror² permettant de suivre facilement vos investissements en cryptomonnaies. Ce module affiche en temps réel la valeur de votre portefeuille, les variations des cryptomonnaies, et des données personnalisables directement à partir de votre fichier de configuration.
 
+![scree4](https://github.com/user-attachments/assets/0436fdde-fdc8-4f8f-8ba5-262641b77c22)
+
 ## Fonctionnalités principales :
 
 - Affichage en temps réel de vos cryptomonnaies avec leur valeur actuelle.
@@ -54,6 +56,8 @@ Créé par DzMassi.
 ## MMM-CryptoPortfolio
 
 MMM-CryptoPortfolio is a module for MagicMirror² that allows you to easily track your cryptocurrency investments. This module displays your portfolio value, cryptocurrency variations, and customizable data in real-time.
+
+![scree4](https://github.com/user-attachments/assets/6addcc82-a0bb-4e03-952e-d21828a2bd57)
 
 ## Key Features:
 
