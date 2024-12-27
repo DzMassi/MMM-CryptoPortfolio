@@ -1,69 +1,103 @@
 MMM-CryptoPortfolio
 
-MMM-CryptoPortfolio est un module pour MagicMirror² qui permet de suivre vos cryptomonnaies préférées, leur valeur actuelle et leur performance. Ce module affiche également le solde total de votre portefeuille et le pourcentage de gain ou de perte.
-🛠️ Fonctionnalités
+MMM-CryptoPortfolio est un module pour MagicMirror² permettant de suivre facilement vos investissements en cryptomonnaies. Ce module affiche en temps réel la valeur de votre portefeuille, les variations des cryptomonnaies, et des données personnalisables directement à partir de votre fichier de configuration.
 
-    Affichage des cryptomonnaies : Consultez vos cryptos avec leur valeur et leur performance sur 24h.
-    Solde total du portefeuille : Le solde total est calculé automatiquement et affiché avec un pourcentage de gain/perte.
-    Logos et performances : Possibilité d'afficher les logos des cryptomonnaies et leur variation en pourcentage.
-    Tri dynamique : Les cryptos sont affichées par ordre décroissant de leur valeur.
-    Sauvegarde des soldes : Historique des soldes totaux sauvegardé automatiquement dans un fichier balances.json.
+Fonctionnalités principales :
 
-📦 Installation
+Affichage en temps réel de vos cryptomonnaies avec leur valeur actuelle.
+Tri automatique des cryptos par leur valeur.
+Affichage des variations sur 24h (avec des couleurs pour les gains et pertes).
+Support des logos des cryptomonnaies.
+Indication du solde total avec pourcentage de variation (gain/perte).
+Sauvegarde automatique de l'historique du solde pour des analyses futures.
+Traductions disponibles : Français et Anglais.
+Couleurs entièrement personnalisables.
+Mise à jour automatique à des intervalles définis.
 
-    Clonez ce dépôt dans le répertoire modules de MagicMirror :
+Installation :
 
+    Clonez ce dépôt dans le répertoire des modules de votre MagicMirror :
     cd ~/MagicMirror/modules
-    git clone https://github.com/YourUsername/MMM-CryptoPortfolio.git
+    git clone https://github.com/DzMassi/MMM-CryptoPortfolio.git
     cd MMM-CryptoPortfolio
     npm install
 
-    Configurez le module dans votre fichier config.js.
-
-⚙️ Configuration
-
-Ajoutez cette configuration dans le fichier config.js :
+Ajoutez le module à votre fichier config.js :
 
 {
     module: "MMM-CryptoPortfolio",
-    position: "top_right", // Position où le module sera affiché
+    position: "top_right", // Position où afficher le module
     config: {
+        apiKey: "VOTRE_CLE_API", // Clé API CoinMarketCap
         currency: "USD", // Devise à afficher (USD, EUR, etc.)
-        displayCount: 5, // Nombre de cryptos affichées
-        showLogos: true, // Affiche les logos des cryptos
-        showPerformance24h: true, // Affiche la performance sur 24h
-        positiveColor: "#00FF00", // Couleur des gains
-        negativeColor: "#FF0000", // Couleur des pertes
-        apiKey: "VOTRE_API_KEY", // Clé API CoinMarketCap
-        cryptoListFile: "modules/MMM-CryptoPortfolio/cryptoList.json", // Chemin vers le fichier JSON
-        updateInterval: 30, // Intervalle de mise à jour (en minutes)
+        updateInterval: 10, // Intervalle de mise à jour
+        updateIntervalUnit: "minutes", // Unité d'intervalle : secondes, minutes, heures
+        displayCount: 10, // Nombre de cryptos à afficher
+        positiveColor: "#00FF00",
+        negativeColor: "#FF0000"
     }
 }
 
-📝 Exemple de fichier cryptoList.json
+Démarrez ou redémarrez votre MagicMirror², et le module apparaîtra.
+    pm2 start mm
+    pm2 restart mm
 
-Listez vos cryptos et leur quantité dans ce fichier :
+Configuration :
 
-[
-    { "name": "BTC", "quantity": 0.1 },
-    { "name": "ETH", "quantity": 2.5 }
-]
+Clé API CoinMarketCap : Obtenez une clé API sur CoinMarketCap.
 
-📂 Fichiers sauvegardés
+Auteur :
 
-![scree4](https://github.com/user-attachments/assets/90bb7f2f-a767-4179-a76a-4399a80a76db)
+Créé avec par DzMassi.
 
 
-Affichage avec logos et performance :
+MMM-CryptoPortfolio
 
-🚀 Prochaines améliorations
+MMM-CryptoPortfolio is a module for MagicMirror² that allows you to easily track your cryptocurrency investments. This module displays your portfolio value, cryptocurrency variations, and customizable data in real-time.
 
-    Ajouter un graphique pour visualiser les performances du portefeuille.
-    Support pour plusieurs périodes de performance (7 jours, 1 mois, etc.).
-    Notifications pour des alertes de prix ou de performance.
+Key Features:
 
-📜 Licence
+Real-time display of your cryptocurrencies with their current value.
+Automatic sorting of cryptocurrencies by value.
+Display of 24-hour performance with color-coded gain/loss indicators.
+Support for cryptocurrency logos.
+Total balance with percentage change (gain/loss).
+Automatic saving of total balance history for future analysis.
+Available translations: French and English.
+Fully customizable colors.
+Automatic updates at user-defined intervals.
 
-Ce projet est sous licence MIT.
+Installation:
 
-Si vous avez des questions ou souhaitez contribuer, n'hésitez pas à ouvrir une issue ou une pull request ! 😊
+    Clone this repository into your MagicMirror modules folder:
+    cd ~/MagicMirror/modules
+    git clone https://github.com/DzMassi/MMM-CryptoPortfolio.git
+    cd MMM-CryptoPortfolio
+    npm install
+
+Add the module to your config.js file:
+    {
+    module: "MMM-CryptoPortfolio",
+    position: "top_right", // Where to display the module
+    config: {
+        apiKey: "YOUR_API_KEY", // CoinMarketCap API Key
+        currency: "USD", // Currency to display (USD, EUR, etc.)
+        updateInterval: 10, // Update interval
+        updateIntervalUnit: "minutes", // Interval unit: seconds, minutes, hours
+        displayCount: 10, // Number of cryptocurrencies to display
+        positiveColor: "#00FF00",
+        negativeColor: "#FF0000"
+    }
+}
+
+Start or restart your MagicMirror², and the module will appear.
+    pm2 start mm
+    pm2 restart mm
+
+Configuration:
+
+    CoinMarketCap API Key: Get your API key from CoinMarketCap.
+    
+Author:
+
+Created with by DzMassi.
