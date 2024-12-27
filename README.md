@@ -48,7 +48,7 @@ Clé API CoinMarketCap : Obtenez une clé API sur CoinMarketCap.
 
 Auteur :
 
-Créé avec par DzMassi.
+Créé par DzMassi.
 
 
 MMM-CryptoPortfolio
@@ -100,4 +100,4 @@ Configuration:
     
 Author:
 
-Created with by DzMassi.
+Created by DzMassi.
