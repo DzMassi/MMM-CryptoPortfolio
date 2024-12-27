@@ -1,0 +1,10 @@
+{
+  "name": "MMM-CryptoPortfolio",
+  "version": "14.0.1",
+  "description": "Crypto portfolio module with dynamic gain/loss percentage display.",
+  "main": "MMM-CryptoPortfolio.js",
+  "author": "DzMasten",
+  "dependencies": {
+    "node-fetch": "^2.6.11"
+  }
+}
