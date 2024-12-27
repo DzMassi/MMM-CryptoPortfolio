@@ -25,20 +25,24 @@ MMM-CryptoPortfolio est un module pour MagicMirror² permettant de suivre facile
     npm install
 
 ## Ajoutez le module à votre fichier config.js :
-
-{
-    module: "MMM-CryptoPortfolio",
-    position: "top_right", // Position où afficher le module
-    config: {
-        apiKey: "VOTRE_CLE_API", // Clé API CoinMarketCap
-        currency: "USD", // Devise à afficher (USD, EUR, etc.)
-        updateInterval: 10, // Intervalle de mise à jour
-        updateIntervalUnit: "minutes", // Unité d'intervalle : secondes, minutes, heures
-        displayCount: 10, // Nombre de cryptos à afficher
-        positiveColor: "#00FF00",
-        negativeColor: "#FF0000"
-    }
-}
+    {
+			module: "MMM-CryptoPortfolio",
+			position: "top_right", // Position où le module sera affiché sur MagicMirror
+			config: {
+			currency: "USD", // Devise : USD, EUR, etc.
+			displayCount: 10, // Nombre de cryptos à afficher
+			showLogos: false,        // Afficher les logos (true/false)
+			showPerformance24h: true, // Afficher la performance 24h (true/false)
+			showTotal: true,
+			sortBy: "value",
+			positiveColor: "#00FF00",        // Couleur des performances positives
+			negativeColor: "#FF0000",        // Couleur des performances négatives
+			apiKey: "VOTRE_CLE_API", // Clé API CoinMarketCap
+			cryptoListFile: "modules/MMM-CryptoPortfolio/cryptoList.json", // Chemin vers le fichier JSON
+			updateInterval: 10, // Intervalle de mise à jour (en fonction de l'unité)
+			updateIntervalUnit: "minutes" // Unité : "seconds", "minutes", ou "hours"
+			}
+		}
 
 ## Démarrez ou redémarrez votre MagicMirror², et le module apparaîtra.
     pm2 start mm
@@ -81,17 +85,22 @@ MMM-CryptoPortfolio is a module for MagicMirror² that allows you to easily trac
 
 ## Add the module to your config.js file:
     {
-    module: "MMM-CryptoPortfolio",
-    position: "top_right", // Where to display the module
-    config: {
-        apiKey: "YOUR_API_KEY", // CoinMarketCap API Key
-        currency: "USD", // Currency to display (USD, EUR, etc.)
-        updateInterval: 10, // Update interval
-        updateIntervalUnit: "minutes", // Interval unit: seconds, minutes, hours
-        displayCount: 10, // Number of cryptocurrencies to display
-        positiveColor: "#00FF00",
-        negativeColor: "#FF0000"
-    }
+	module: "MMM-CryptoPortfolio",
+	position: "top_right", // Position where the module will be displayed on MagicMirror
+	config: {
+		currency: "USD", // Currency: USD, EUR, etc.
+		displayCount: 10, // Number of cryptocurrencies to display
+		showLogos: false, // Display logos (true/false)
+		showPerformance24h: true, // Display 24-hour performance (true/false)
+		showTotal: true, // Show total balance
+		sortBy: "value", // Sort by: value, name, etc.
+		positiveColor: "#00FF00", // Color for positive performance
+		negativeColor: "#FF0000", // Color for negative performance
+		apiKey: "YOUR_API_KEY", // CoinMarketCap API Key
+		cryptoListFile: "modules/MMM-CryptoPortfolio/cryptoList.json", // Path to the JSON file
+		updateInterval: 10, // Update interval (based on the unit)
+		updateIntervalUnit: "minutes" // Unit: "seconds", "minutes", or "hours"
+	}
 }
 
 ## Start or restart your MagicMirror², and the module will appear.
