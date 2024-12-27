@@ -1,0 +1,51 @@
+/* Table layout */
+.MMM-CryptoPortfolio table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.MMM-CryptoPortfolio td {
+  padding: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Section Total Value */
+.MMM-CryptoPortfolio .total-title {
+  font-size: 16px; /* Taille du titre */
+  font-weight: bold; /* Texte en gras */
+  margin-bottom: 5px;
+  text-align: left;
+  color: #ffffff; /* Couleur blanche ou modifiable selon vos préférences */
+}
+
+.MMM-CryptoPortfolio .total {
+  font-size: 22px; /* Taille de la valeur totale */
+  font-weight: bold; /* Texte en gras */
+  margin-bottom: 10px; /* Espacement avec la table */
+  transition: color 0.3s ease; /* Animation douce pour le changement de couleur */
+}
+
+/* Logo styles */
+.MMM-CryptoPortfolio .crypto-logo {
+  width: 5px; /* Taille très petite */
+  height: 5px; /* Taille très petite */
+  margin-right: 3px; /* Espacement entre le logo et le texte */
+}
+
+/* Positive and negative performance */
+.MMM-CryptoPortfolio .positive {
+  color: #00FF00; /* Vert pour les gains */
+}
+
+.MMM-CryptoPortfolio .negative {
+  color: #FF0000; /* Rouge pour les pertes */
+}
+
+/* Footer copyright */
+.MMM-CryptoPortfolio .copyright {
+  font-size: 12px; /* Taille plus petite */
+  text-align: center; /* Centré */
+  margin-top: 10px; /* Espacement par rapport à la table */
+  color: #888; /* Gris clair */
+}
