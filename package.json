@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Crypto portfolio module with dynamic gain/loss percentage display.",
   "main": "MMM-CryptoPortfolio.js",
-  "author": "DzMasten",
+  "author": "DzMassi",
   "dependencies": {
     "node-fetch": "^2.6.11"
   }
